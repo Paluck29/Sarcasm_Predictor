@@ -1,0 +1,46 @@
+<html>
+ <head>
+ <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+ </head>
+ <body>
+
+<div class="login">
+
+ <h2>The given sentence:</h2>
+
+ <div>{{ sentence }}</div>
+ 
+ <h2>Results predicted by various classifiers:</h2>
+
+ <div class="container">
+
+ <table border="1px" style="width:100%; padding:15px; text-align: center;">
+ <tr>
+ <th><strong>Logistic Regression</strong> </th> 
+ <th><strong>Naive Bayes</strong> </th>
+ <th><strong>Random Forest</strong> </th>
+ <th><strong>Support Vector Machine</strong> </th>
+ </tr>
+
+ <tr>
+ <td><strong>{{ predicted_text_l }}</strong></td>
+ <td><strong>{{ predicted_text_n }}</strong></td>
+ <td><strong>{{ predicted_text_r }}</strong></td>
+ <td><strong>{{ predicted_text_s }}</strong></td>
+ </tr>
+
+ </table>
+
+ </div>
+
+</div>
+
+ </body>
+</html>
